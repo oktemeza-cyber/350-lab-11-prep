@@ -41,7 +41,7 @@ int main() {
     }
     std::sort(paths.begin(), paths.end());  // lexicographic order
     for (const auto& path : paths) {
-        atlas.registerTexture(path);
+        atlas.registerTexture(path.string());
     }
     sf::Image atlasImg = atlas.getTexture().copyToImage();
     if (!atlasImg.saveToFile("atlas.png")) {
